@@ -1,9 +1,11 @@
 package com.example.service;
 
 import com.example.Console;
+import com.example.dao.QuizDatabase;
 import com.example.dao.QuizDatabaseMock;
 import com.example.domain.Quiz;
 import com.example.domain.Speler;
+import com.example.domain.Vraag;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +24,20 @@ public class Spel {
                 speler.setBalans(40);
                 System.out.println("40 credits van je balans afgehaald");
                 System.out.println("QuizDatabase zoeken...");
-//                QuizDatabase quiz = new QuizDatabase(speler);
+                QuizDatabaseMock quizDB = new QuizDatabaseMock();
+                ArrayList<Quiz> quizzes = quizDB.getQuizzes();
+
+                for (Quiz quiz : quizzes) {
+                    ArrayList<Vraag> vragen = quiz.getVragen();
+                    for(Vraag vraag : vragen) {
+                        System.out.println("Vraag: " + vraag.getVraag());
+                        if(console.read().equals(vraag.getAntwoord())) {
+                            System.out.println("Goed gedaan!");
+                        } else {
+                            System.out.println("Volgende keer beter!");
+                        }
+                    }
+                }
             } else {
                 System.out.println("Niet genoeg balans...");
             }
