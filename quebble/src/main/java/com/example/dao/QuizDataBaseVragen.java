@@ -2,6 +2,7 @@ package com.example.dao;
 
 import com.example.domain.Vraag;
 import com.example.domain.VraagKortAntwoord;
+import com.example.domain.VraagMeerkeuze;
 
 import java.util.ArrayList;
 
@@ -17,11 +18,18 @@ public class QuizDataBaseVragen {
     Vraag v8 = new VraagKortAntwoord("Wie speelde Mr Freeze in Batman and Robin?",
             "Arnold Schwarzenegger");
 
+    Vraag v9 = new VraagMeerkeuze("Wat is de hoofdstad van Peru?","C",
+            "A) Arequipa",
+            "B) Caracas",
+            "C) Lima",
+            "D) Santiago");
+
     public ArrayList<Vraag> getAllVragen() {
         ArrayList<Vraag> vragen = new ArrayList<>();
 
+        //TODO: make this loopy loop
         vragen.add(v1);
-        vragen.add(v2);
+        vragen.add(v9);
         vragen.add(v3);
         vragen.add(v4);
         vragen.add(v5);

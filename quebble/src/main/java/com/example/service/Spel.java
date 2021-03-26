@@ -44,10 +44,10 @@ public class Spel {
         Quiz quiz = quizzes.get(0);
 
         ArrayList<Antwoord> antwoorden = laatVragenZien(quiz.getVragen());
-        System.out.println("Antwoorden controleren...");
+        System.out.println("\nAntwoorden controleren...");
         ArrayList<Letter> letters = controleerVragen(antwoorden);
 
-        System.out.print("Maak een woord met deze letters:");
+        System.out.print("\nMaak een woord met deze letters:");
         for (Letter letter : letters) {
             System.out.print(" " + letter.getLetter());
         }
@@ -57,7 +57,16 @@ public class Spel {
         ArrayList<Antwoord> antwoorden = new ArrayList<>();
 
         for(Vraag vraag : vragen) {
-            System.out.println("Vraag: " + vraag.getVraag());
+            System.out.println("\nVraag: " + vraag.getVraag());
+
+            if(vraag instanceof VraagMeerkeuze) {
+                VraagMeerkeuze meerkeuzeVraag = (VraagMeerkeuze) vraag;
+
+                System.out.println("Antwoorden: ");
+                for(String antwoord : meerkeuzeVraag.getAntwoorden()) {
+                    System.out.println(antwoord);
+                }
+            }
 
             Antwoord antwoord = new Antwoord(console.read(),vraag,speler);
             antwoorden.add(antwoord);
