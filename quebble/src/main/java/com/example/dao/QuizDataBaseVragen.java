@@ -36,6 +36,7 @@ public class QuizDataBaseVragen {
         vragen.add(v6);
         vragen.add(v7);
         vragen.add(v8);
+        vragen.add(v9);
 
         return vragen;
     }
