@@ -31,14 +31,6 @@ public class Spel {
         }
     }
 
-    public boolean checkBalans() {
-        if(speler.getBalans() > 40) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public void speelQuiz() throws IOException {
         Quiz nieuweQuiz = getNieuweQuiz();
 
@@ -49,6 +41,14 @@ public class Spel {
         System.out.print("\nMaak een woord met deze letters:");
         for (Letter letter : letters) {
             System.out.print(" " + letter.getLetter());
+        }
+    }
+
+    public boolean checkBalans() {
+        if(speler.getBalans() > 40) {
+            return true;
+        } else {
+            return false;
         }
     }
 
