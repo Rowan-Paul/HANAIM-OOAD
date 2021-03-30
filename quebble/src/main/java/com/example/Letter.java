@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example;
 
 public class Letter {
     private String letter;

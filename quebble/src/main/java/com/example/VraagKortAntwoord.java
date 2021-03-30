@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example;
 
 public class VraagKortAntwoord implements Vraag {
     private String vraag;

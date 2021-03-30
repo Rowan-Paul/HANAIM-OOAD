@@ -1,6 +1,6 @@
 package com.example.dao;
 
-import com.example.domain.Quiz;
+import com.example.Quiz;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,7 @@
 package com.example.dao;
 
-import com.example.domain.Quiz;
-import com.example.domain.Vraag;
+import com.example.Quiz;
+import com.example.Vraag;
 
 import java.util.ArrayList;
 import java.util.List;

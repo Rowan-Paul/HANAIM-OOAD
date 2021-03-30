@@ -1,8 +1,8 @@
 package com.example.dao;
 
-import com.example.domain.Vraag;
-import com.example.domain.VraagKortAntwoord;
-import com.example.domain.VraagMeerkeuze;
+import com.example.Vraag;
+import com.example.VraagKortAntwoord;
+import com.example.VraagMeerkeuze;
 
 import java.util.ArrayList;
 

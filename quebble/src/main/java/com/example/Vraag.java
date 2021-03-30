@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example;
 
 public interface Vraag {
     public String getVraag();

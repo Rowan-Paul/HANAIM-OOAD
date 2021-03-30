@@ -1,8 +1,6 @@
-package com.example.service;
+package com.example;
 
-import com.example.Console;
 import com.example.dao.QuizDatabaseMock;
-import com.example.domain.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
