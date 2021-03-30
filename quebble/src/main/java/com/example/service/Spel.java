@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class Spel {
     Console console = new Console();
     Speler speler = new Speler("sjaak",1000);
+    ArrayList<Integer> gespeeldeQuizzes = speler.getGespeeldeQuizzes();
     QuizDatabaseMock quizDB = new QuizDatabaseMock();
 
     public void setup() throws IOException {
@@ -39,11 +40,9 @@ public class Spel {
     }
 
     public void speelQuiz() throws IOException {
-        //TODO: get 1 quiz the user hasn't played yet
-        ArrayList<Quiz> quizzes = quizDB.getQuizzes();
-        Quiz quiz = quizzes.get(0);
+        Quiz nieuweQuiz = getNieuweQuiz();
 
-        ArrayList<Antwoord> antwoorden = laatVragenZien(quiz.getVragen());
+        ArrayList<Antwoord> antwoorden = laatVragenZien(nieuweQuiz.getVragen());
         System.out.println("\nAntwoorden controleren...");
         ArrayList<Letter> letters = controleerVragen(antwoorden);
 
@@ -51,6 +50,22 @@ public class Spel {
         for (Letter letter : letters) {
             System.out.print(" " + letter.getLetter());
         }
+    }
+
+    public Quiz getNieuweQuiz() {
+        ArrayList<Quiz> quizzes = quizDB.getQuizzes();
+        Quiz nieuweQuiz = null;
+
+        for(Quiz quiz : quizzes) {
+            if(!speler.getGespeeldeQuizzes().contains(quiz.getId())) {
+                nieuweQuiz = quiz;
+                gespeeldeQuizzes.add(quiz.getId());
+                speler.setGespeeldeQuizzes(gespeeldeQuizzes);
+                break;
+            }
+        }
+
+        return nieuweQuiz;
     }
 
     public ArrayList<Antwoord> laatVragenZien(ArrayList<Vraag> vragen) throws IOException {

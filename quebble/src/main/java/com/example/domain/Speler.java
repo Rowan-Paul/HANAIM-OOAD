@@ -6,10 +6,15 @@ public class Speler {
     private String gebruikersnaam;
     private int balans;
     private ArrayList<Antwoord> antwoorden;
+    private ArrayList<Integer> gespeeldeQuizzes;
 
     public Speler(String gebruikersnaam, int balans) {
         this.gebruikersnaam = gebruikersnaam;
         this.balans = balans;
+
+        ArrayList<Integer> gespeeldeQuizzes = new ArrayList<>();
+        gespeeldeQuizzes.add(0);
+        this.gespeeldeQuizzes = gespeeldeQuizzes;
     }
 
     public String getGebruikersnaam() {
@@ -34,5 +39,13 @@ public class Speler {
 
     public void setAntwoorden(ArrayList<Antwoord> antwoorden) {
         this.antwoorden = antwoorden;
+    }
+
+    public ArrayList<Integer> getGespeeldeQuizzes() {
+        return gespeeldeQuizzes;
+    }
+
+    public void setGespeeldeQuizzes(ArrayList<Integer> gespeeldeQuizzes) {
+        this.gespeeldeQuizzes = gespeeldeQuizzes;
     }
 }

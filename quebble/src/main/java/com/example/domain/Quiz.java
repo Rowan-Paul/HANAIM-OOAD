@@ -1,22 +1,21 @@
 package com.example.domain;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class Quiz {
-    private String id;
+    private int id;
     private ArrayList<Vraag> vragen;
 
-    public Quiz(ArrayList<Vraag> vragen) {
-        this.id = UUID.randomUUID().toString();
+    public Quiz(int id, ArrayList<Vraag> vragen) {
+        this.id = id;
         this.vragen = vragen;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
