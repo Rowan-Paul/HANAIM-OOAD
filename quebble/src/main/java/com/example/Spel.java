@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.dao.QuizDatabaseMock;
+import com.example.database.QuizDatabaseMock;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,9 +36,16 @@ public class Spel {
         System.out.println("\nAntwoorden controleren...");
         ArrayList<Letter> letters = controleerVragen(antwoorden);
 
-        System.out.print("\nMaak een woord met deze letters:");
-        for (Letter letter : letters) {
-            System.out.print(" " + letter.getLetter());
+        if(letters.size() > 0) {
+            System.out.print("\nMaak een woord met deze letters:");
+            for (Letter letter : letters) {
+                System.out.print(" " + letter.getLetter());
+            }
+
+            System.out.println(" ");
+            if (console.read() != null) {
+                System.out.println("Woord controleren...");
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.database;
 
 import com.example.Quiz;
 import com.example.Vraag;
