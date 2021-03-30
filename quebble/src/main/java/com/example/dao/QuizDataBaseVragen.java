@@ -7,48 +7,59 @@ import com.example.domain.VraagMeerkeuze;
 import java.util.ArrayList;
 
 public class QuizDataBaseVragen {
-    Vraag v1 = new VraagKortAntwoord("Hoe laat begint lunch?","12 uur");
-    Vraag v2 = new VraagKortAntwoord("Waar staat RAM voor?", "Random Access Memory");
-    Vraag v3 = new VraagKortAntwoord("Wat is de grootste orgaan van de mens?","Lever");
-    Vraag v4 = new VraagKortAntwoord("Welk Afrikaans dier doodt de meeste mensen?","Krokodil");
-    Vraag v5 = new VraagKortAntwoord("Waar of niet waar: haaien knipperen niet","Waar");
-    Vraag v6 = new VraagKortAntwoord("Hoeveel ogen heeft een bij?","5");
+    Vraag v1 = new VraagKortAntwoord("Hoe laat begint lunch?","12 uur","T");
+    Vraag v2 = new VraagKortAntwoord("Waar staat RAM voor?", "Random Access Memory",
+            "A");
+    Vraag v3 = new VraagKortAntwoord("Wat is de grootste orgaan van de mens?","Lever",
+            "L");
+    Vraag v4 = new VraagKortAntwoord("Welk Afrikaans dier doodt de meeste mensen?","Krokodil",
+            "O");
+    Vraag v5 = new VraagKortAntwoord("Waar of niet waar: haaien knipperen niet","Waar",
+            "W");
+    Vraag v6 = new VraagKortAntwoord("Hoeveel ogen heeft een bij?","5","E");
     Vraag v7 = new VraagKortAntwoord("Hoe heten de 2 huurmoordenaars in Pulp Fiction",
-            "Vincent Vega & Jules Winnfield");
+            "Vincent Vega & Jules Winnfield","K");
     Vraag v8 = new VraagKortAntwoord("Wie speelde Mr Freeze in Batman and Robin?",
-            "Arnold Schwarzenegger");
+            "Arnold Schwarzenegger", "A");
 
     Vraag v9 = new VraagMeerkeuze("Wat is de hoofdstad van Peru?",
             "C",
+            "L",
             "A) Arequipa",
             "B) Caracas",
             "C) Lima",
             "D) Santiago");
     Vraag v10 = new VraagMeerkeuze("Hoe heet de officieuze landenkampioenschap tennis voor mannen?",
             "A",
+            "D",
             "A) Davis Cup",
             "B) Diamond League",
             "C) Fed Cup",
             "D) Nations League");
     Vraag v11 = new VraagMeerkeuze("Wat is de voornaam van de schepper van Miss Marple en Hercule Poirot?",
             "D",
+            "A",
             "A) Ruth",
             "B) Emmy",
             "C) Joanne",
             "D) Agatha");
     Vraag v12 = new VraagMeerkeuze("Welke van de volgende Engelse voetbalclub is afkomstig uit Liverpool?",
             "C",
+            "E",
             "A) Arsenal",
             "B) Chelsea",
             "C) Everton",
             "D) Dottenham Hotspur");
     Vraag v13 = new VraagMeerkeuze("Wat is de hoofdstad van het Franse departement Vaucluse die we kennen uit"+
-            "een heel bekend liedje over een brug?", "B",
+            "een heel bekend liedje over een brug?",
+            "B",
+            "A",
             "A) Parijs",
             "B) Avignon",
             "C) Keulen",
             "D) Port-au-Prince");
     Vraag v14 = new VraagMeerkeuze("Welke band stond in 2008 in de hitparade met de song Viva La Vida?",
+            "C",
             "C",
             "A) Kensington",
             "B) One Direction",
@@ -56,12 +67,14 @@ public class QuizDataBaseVragen {
             "D) Hotplay");
     Vraag v15 = new VraagMeerkeuze("Wat is de bijnaam van de Conservatieve Partij in Engeland?",
             "A",
+            "T",
             "A) Tory, Torries, The Tories",
             "B) Red hats",
             "C) Tobies",
             "D) Tonies");
     Vraag v16 = new VraagMeerkeuze("Wat stad ligt in twee continenten?",
             "A",
+            "I",
             "A) Instanboel",
             "B) Istanbon",
             "C) Constantinopel",

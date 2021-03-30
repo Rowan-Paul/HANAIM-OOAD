@@ -6,14 +6,16 @@ import java.util.ArrayList;
 public class VraagMeerkeuze implements Vraag {
     private String vraag;
     private String antwoord;
+    private String verdienenLetter;
     private String antwoordA;
     private String antwoordB;
     private String antwoordC;
     private String antwoordD;
 
-    public VraagMeerkeuze(String vraag, String antwoord, String antwoordA, String antwoordB, String antwoordC, String antwoordD) {
+    public VraagMeerkeuze(String vraag, String antwoord, String verdienenLetter, String antwoordA, String antwoordB, String antwoordC, String antwoordD) {
         this.vraag = vraag;
         this.antwoord = antwoord;
+        this.verdienenLetter = verdienenLetter;
         this.antwoordA = antwoordA;
         this.antwoordB = antwoordB;
         this.antwoordC = antwoordC;
@@ -38,6 +40,16 @@ public class VraagMeerkeuze implements Vraag {
     @Override
     public void setAntwoord(String antwoord) {
         this.antwoord = antwoord;
+    }
+
+    @Override
+    public String getVerdienenLetter() {
+        return verdienenLetter;
+    }
+
+    @Override
+    public void setVerdienenLetter(String verdienenLetter) {
+        this.verdienenLetter = verdienenLetter;
     }
 
     public String getAntwoordA() {

@@ -82,7 +82,7 @@ public class Spel {
         for(Antwoord antwoord : antwoorden) {
             if(antwoord.getAntwoord().equals(antwoord.getVraag().getAntwoord())) {
                 //TODO: return letter which can make a word (first letter of answer)
-                Letter letter = new Letter("a");
+                Letter letter = new Letter(antwoord.getVraag().getVerdienenLetter());
                 letters.add(letter);
                 antwoordenGoed++;
             }

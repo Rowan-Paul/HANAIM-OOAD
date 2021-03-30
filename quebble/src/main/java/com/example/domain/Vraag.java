@@ -5,4 +5,6 @@ public interface Vraag {
     public void setVraag(String vraag);
     public String getAntwoord();
     public void setAntwoord(String antwoord);
+    public String getVerdienenLetter();
+    public void setVerdienenLetter(String verdienenLetter);
 }
